@@ -1,0 +1,35 @@
+
+.header {
+    background: var(--white, #FFFFF1);
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+    &__leftIcons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+
+        button {
+           background: none;
+           border: none;
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    &__rightIcons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+
+
