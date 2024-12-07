@@ -1,0 +1,30 @@
+  .banner {
+    padding-left: 30px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background: url(../../assets/Banners/banner.jpg);
+  }
+  
+  .btn {
+    width: 218px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #92A134;  
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    color: var(--txt-white, #FFF);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #7f8b26;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+ 

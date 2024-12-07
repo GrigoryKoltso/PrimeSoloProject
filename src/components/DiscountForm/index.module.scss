@@ -1,0 +1,93 @@
+.discount {
+    width: 1360px;
+    height: 486px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: var(--radius-big, 12px);
+    background: linear-gradient(80deg, #87933d -0.68%, #55610b 66.66%),
+      linear-gradient(261deg, #0b710b 32.63%, #393 98.96%);
+
+      &__content {
+        display: flex;
+
+        img {
+          margin: 0 32px;
+        }
+      }
+
+      h3 {
+       margin: 32px 0 24px;
+       color: var(--txt-white, #fff);
+       text-align: center;
+       font-family: Montserrat;
+       font-size: 64px;
+       font-style: normal;
+       font-weight: 700;
+       line-height: 110%;
+     }
+     
+     form {
+       flex: 1;
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+       margin: 35px 45px 0 0;
+   
+       input {
+         padding: 25px;
+         font-size: 16px;
+         background-color: transparent;
+         border-radius: var(--radius-small, 6px);
+         border: 1px solid var(--white, #fffff1);
+         width: 538px;
+         height: 60px;
+         font-family: Montserrat;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: 130%;
+       
+         &::placeholder {
+           color: #fff;
+           opacity: 1;
+           font-weight: 200;
+         }
+       }
+       
+       button {
+         padding: 10px;
+         color: #333;
+         cursor: pointer;
+         transition: background-color 0.3s;
+         width: 538px;
+         height: 60px;
+         border-radius: var(--radius-small, 6px);
+         background: var(--white, #fffff1);
+         color: var(--txt-black, #424436);
+         text-align: center;
+         font-family: Montserrat;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: 130%;
+       
+         &:hover {
+           background-color: #b7e261;
+         }
+     
+         a {
+          text-decoration: none;
+         }
+     
+       }
+     }
+  }
+  
+  
+  
+  
+  
