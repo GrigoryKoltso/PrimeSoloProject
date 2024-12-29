@@ -6,6 +6,7 @@ import cartLogo from '../../assets/Logos/cart.svg'
 import heartLogo from '../../assets/Logos/heart.svg'
 import lightMode from '../../assets/Buttons/lightMode.svg'
 import Navbar from '../Navbar';
+import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <header className={`${s.header} app-container`}>
@@ -15,12 +16,14 @@ const Header = () => {
                     <img src={lightMode} alt="" />
                 </button>
             </div>
-                
-              <Navbar/>
-                
+
+            <Navbar />
+
             <div className={s.header__rightIcons}>
                 <img src={heartLogo} alt="heart" />
-                <img src={cartLogo} alt="cart" />
+                <Link to='cart'>
+                    <img src={cartLogo} alt="cart" />
+                </Link>
             </div>
         </header>
     );

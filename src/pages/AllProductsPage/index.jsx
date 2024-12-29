@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 const AllProductsPage = () => {
     const allProductsState = useSelector(store => store.products)
     return (
-        <div>
+        <div className='app-container'>
             <ProductsContainer products={allProductsState.data}/>
         </div>
     );

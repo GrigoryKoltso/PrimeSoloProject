@@ -5,7 +5,7 @@ import s from './index.module.scss'
 const ProductsContainer = ( {products} ) => {
     
     return (
-        <div className={` ${s.productsContainer} app-container`}>
+        <div className={ s.productsContainer} >
             {
                 products.map(el => <ProductCard key={el.id} {...el}/>)
             }
