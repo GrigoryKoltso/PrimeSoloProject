@@ -1,18 +1,36 @@
-import { fetchProductsRequest, fetchProductsSuccess, fetchProductsFailure } from "../store/actions/productsAction";
+import { fetchProductsRequest, fetchProductsSuccess, fetchProductsFailure, loadSingleProductAction } from "../store/actions/productsAction";
 
-export const getAllProducts = (dispatch) => {
-    dispatch(fetchProductsRequest());
-    fetch('http://localhost:3333/products/all')
+const fetchFromApi = (url, dispatch, successAction, failureAction) => {
+  dispatch(fetchProductsRequest());
+  fetch(url)
     .then((res) => {
-        if(!res.ok) {
-            throw new Error('Failed to fetch products')
-        }
-        return res.json();
+      if (!res.ok) {
+        throw new Error('Failed to fetch');
+      }
+      return res.json();
     })
     .then((data) => {
-        dispatch(fetchProductsSuccess(data))
+      dispatch(successAction(data));
     })
     .catch((error) => {
-        dispatch(fetchProductsFailure(error.message))
-    })
-}
+      dispatch(failureAction(error.message));
+    });
+};
+
+export const getAllProducts = (dispatch) => {
+  fetchFromApi(
+    'http://localhost:3333/products/all',
+    dispatch,
+    fetchProductsSuccess,
+    fetchProductsFailure
+  );
+};
+
+export const getSingleProduct = (id) => (dispatch) => {
+  fetchFromApi(
+    `http://localhost:3333/products/${id}`,
+    dispatch,
+    loadSingleProductAction,
+    fetchProductsFailure
+  );
+};
