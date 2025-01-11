@@ -15,7 +15,7 @@ const MainPage = () => {
     const slicedCategories = categoriesState.slice(0, 4);
 
     return (
-        <div>
+        <div className='mainPage'>
             <Banner/>
             <CategoriesContainer categories={slicedCategories}/>
             <DiscountForm/>

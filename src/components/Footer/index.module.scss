@@ -4,8 +4,10 @@
     flex-direction: column;
     align-items: flex-start;
     background-color: #fffff1;
+    margin: 80px;
 
     &__container {
+        margin-top: 40px;
         display: grid;
         grid-template-columns: 1.42fr 1fr;
         gap: 20px;

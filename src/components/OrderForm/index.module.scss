@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.orderForm {
+    form {
+        background: #F2F6D3;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 548px;
+        height: 582px;
+        padding: 30px;
+        border-radius: var(--radius-big, 12px);
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p:last-child {
+                font-size: 64px;
+                font-weight: 700;
+                color:#424436;
+                font-style: Montserrat;
+            }
+        }
+
+        h3 {
+            font-family: Montserrat;
+            color: #424436;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+        }
+
+        p {
+            color: var(--txt-grey, #8b8b8b);
+            font-family: Montserrat;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .totalPrice {
+            margin-left: 50px;
+        }
+
+        input {
+            font-size: 20px;
+            padding-left: 30px;
+            width: 484px;
+            height: 58px;
+        }
+
+        input::placeholder {
+            color: #8B8B8B;
+            font-size: 20px;
+            padding-left: 25px;
+            line-height: 26px;
+        }
+
+        button {
+            width: 484px;
+            height: 58px;
+            color: var(--txt-white, #fff);
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 130%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--radius-small, 6px);
+            background: var(--green, #92a134);
+        }
+    }
+}

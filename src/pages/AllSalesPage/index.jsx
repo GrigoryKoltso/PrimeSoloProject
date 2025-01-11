@@ -10,6 +10,7 @@ const AllSalesPage = () => {
     const discountedProducts = productsState.data.filter((product) => product.discont_price)
     return (
         <section className={`${s.sales} container`}>
+            <h2>Discounted items</h2>
             <ProductsContainer products={discountedProducts} />
         </section>
     );
