@@ -1,6 +1,15 @@
 
+
 .cartContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    scrollbar-width: thin; /* Для Firefox */
+    scrollbar-color: #ccc transparent;
 }
+
+
+
+.cartContainer::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Цвет полосы */
+    border-radius: 4px; /* Скругление */
+}
+
+

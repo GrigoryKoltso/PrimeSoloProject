@@ -1,20 +1,18 @@
-
 .header {
     background: var(--white, #FFFFF1);
     height: 128px;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    
+
     &__leftIcons {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap:15px;
+        gap: 15px;
 
         button {
-           background: none;
-           border: none;
+            background: none;
+            border: none;
         }
 
         img {
@@ -28,8 +26,46 @@
         justify-content: center;
         align-items: center;
         gap: 15px;
+
+        a {
+            transition: transform 0.3s ease, color 0.3s ease;
+            position: relative;
+
+            &:hover {
+                transform: scale(1.2); // Легкое увеличение
+            }
+
+            &:active {
+                transform: scale(1.1); // Легкое уменьшение после клика
+            }
+
+
+            span {
+                background: #92A134;
+                color: white;
+                font-size: 17px;
+                font-weight: bold;
+                border-radius: 50%;
+                /* Делаем круглый */
+                padding: 5px;
+                position: absolute;
+                top: 5px;
+                right: 25px;
+                width: 30px;
+                /* Устанавливаем ширину */
+                height: 30px;
+                /* Устанавливаем высоту */
+                display: flex;
+                /* Центруем текст */
+                align-items: center;
+                /* Центровка по вертикали */
+                justify-content: center;
+                /* Центровка по горизонтали */
+                text-align: center;
+                /* Центровка текста */
+            }
+        }
     }
+
+
 }
-
-
-

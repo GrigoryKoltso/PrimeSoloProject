@@ -6,7 +6,7 @@ const CategoriesPage = () => {
     const categoriesState = useSelector(store => store.categories)
 
     return (
-        <div >
+        <div className='app-container'>
             <CategoriesContainer categories={categoriesState} />
         </div>
     );
