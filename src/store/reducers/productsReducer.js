@@ -26,7 +26,7 @@ export const productsReducer = (state = initState, action) => {
                 ...state,
                 loading: false,
                 error: action.payload
-            }
+            }  
         default: return state
     }
 

@@ -7,7 +7,7 @@ const OrderForm = () => {
 
     const cartState = useSelector(store => store.cart);
 
-    const totalItems = cartState.reduce((acc, el) => acc + el.count, 0);
+    const totalItems = cartState.length
 
     const totalPrice = cartState.reduce((acc, el) => acc + (el.price * el.count), 0).toFixed(2);
 
@@ -48,10 +48,6 @@ const OrderForm = () => {
             <form onSubmit={handleSubmit(submit)}>
                 <h3>Order details</h3>
                 <p>{totalItems} items</p>
-                {/* <p className={s.total}>
-                    Total: <span className={s.totalPrice}>${totalPrice}</span>
-                </p> */}
-
                 <div>
                     <p>Total</p>
                     <p>${totalPrice}</p>

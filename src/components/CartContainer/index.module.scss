@@ -1,15 +1,13 @@
 
 
 .cartContainer {
-    scrollbar-width: thin; /* Для Firefox */
+    scrollbar-width: thin; /* for Firefox */
     scrollbar-color: #ccc transparent;
 }
 
-
-
 .cartContainer::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Цвет полосы */
-    border-radius: 4px; /* Скругление */
+    background-color: #cccccc; 
+    border-radius: 4px; 
 }
 
 

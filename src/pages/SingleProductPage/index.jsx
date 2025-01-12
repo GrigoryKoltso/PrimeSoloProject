@@ -10,7 +10,6 @@ const SingleProductPage = () => {
     const singleProductState = useSelector(store => store.singleProduct);
 
     const { id, title, description, price, image, categoryId, discont_price, count } = singleProductState
-    console.log(singleProductState);
 
     const discountPercentage = discont_price
         ? Math.round(((price - discont_price) / price) * 100)

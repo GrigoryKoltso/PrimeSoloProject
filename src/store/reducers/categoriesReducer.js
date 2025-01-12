@@ -1,4 +1,7 @@
 const LOAD_ALL_CATEGORIES = "LOAD_ALL_CATEGORIES";
+const LOAD_PRODUCTS_BY_CATEGORY = 'LOAD_PRODUCTS_BY_CATEGORY';
+
+
 
 export const loadAllCategoriesAction = categories => ({
   type: LOAD_ALL_CATEGORIES,
