@@ -19,7 +19,7 @@ const CartPage = () => {
                 {isCartEmpty && (
                     <>
                         <p> OOOPS! Your cart is empty.</p>
-                        <Link to="/products">Вперед к покупкам</Link>
+                        <Link to="/products">Go shopping</Link>
                     </>
                 )}
             </div>
@@ -28,16 +28,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-
-// {discont_price && (
-//     <div className={s.discount_info}>-{discountPercentage}%</div>
-// )}
-
-// {discont_price !== null ? (
-//     <div>
-//         <p className={s.def_price}>${discont_price}</p>
-//         <p className={s.price}>{price}</p>
-//     </div>
-// ) : (
-//     <p className={s.def_price}>${price}</p>
-// )}

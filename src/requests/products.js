@@ -1,4 +1,4 @@
-import { fetchProductsRequest, fetchProductsSuccess, fetchProductsFailure, loadSingleProductAction } from "../store/actions/productsAction";
+import { fetchProductsRequest, fetchProductsSuccess, fetchProductsFailure, loadSingleProductAction, loadProductsByCategoryAction } from "../store/actions/productsAction";
 
 const fetchFromApi = (url, dispatch, successAction, failureAction) => {
   dispatch(fetchProductsRequest());
@@ -34,3 +34,16 @@ export const getSingleProduct = (id) => (dispatch) => {
     fetchProductsFailure
   );
 };
+
+export const getProductsByCategory = (category_name) => {
+  return (dispatch) => {
+    fetchFromApi(
+      `http://localhost:3333/categories/${category_name}`,
+      dispatch,
+      loadProductsByCategoryAction,
+      fetchProductsFailure
+    );
+  };
+};
+
+
