@@ -1,31 +1,15 @@
-.orderForm {
-    display: flex;
-    justify-content: space-between;
-    
-    >div {
-        display: flex;
-    }
 
-    h2 {
-        margin: 30px 0;
-    }
-    p {
-        color: #8B8B8B;
-        font-family: Montserrat;
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 110%;
-    }
-
-}
-
-.emptyCart {
-    margin-top: 30px;
+.favoritePage {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 30px;
+}
+
+.emptyFavourite {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
     a {
         width: 484px;
         height: 58px;
@@ -41,6 +25,7 @@
         border-radius: var(--radius-small, 6px);
         background: var(--green, #92a134);
     }
+    
     p {
         color: #424436;
         font-family: Montserrat;
