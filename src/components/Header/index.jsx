@@ -13,6 +13,9 @@ const Header = () => {
     const cartState = useSelector(store => store.cart);
     const cartCount = cartState.reduce((acc, el) => acc + el.count, 0);
 
+    const favoriteState = useSelector(store => store.favorite);
+    const favoriteCount = favoriteState.length
+
     return (
         <header className={`${s.header} app-container`}>
             <div className={s.header__leftIcons}>
@@ -27,6 +30,9 @@ const Header = () => {
             <div className={s.header__rightIcons}>
                 <Link to='/favorites'>
                     <img className={s.icon} src={heartLogo} alt="heart" />
+                    {
+                        favoriteCount !== 0 && <span>{favoriteCount}</span>
+                    }
                 </Link>
                 <Link to='cart'>
                     <img src={cartLogo} alt="cart" />

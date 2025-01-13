@@ -11,20 +11,21 @@ const CartPage = () => {
     const isCartEmpty = cartState.length === 0;
 
     return (
-        <div className={`${s.orderForm} container`}>
+        <div className="container">
             <h2>Shopping cart</h2>
-            <div>
+            <div className={s.orderForm}>
                 <CartContainer />
                 {!isCartEmpty && <OrderForm />}
-                {isCartEmpty && (
-                    <>
-                        <p> OOOPS! Your cart is empty.</p>
-                        <Link to="/products">Go shopping</Link>
-                    </>
-                )}
             </div>
+            {isCartEmpty && (
+                <div className={s.emptyCart}>
+                    <p>Looks like you have no items in your basket currently.</p>
+                    <Link to="/products">Continue shopping</Link>
+                </div>
+            )}
         </div>
     );
+    
 };
 
 export default CartPage;
