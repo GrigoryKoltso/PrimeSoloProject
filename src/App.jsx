@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { json, NavLink, Route, Routes } from 'react-router-dom'
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import NotFoundPage from './pages/NotFoundPage/index';
 import MainPage from './pages/MainPage/index';
 import AllProductsPage from './pages/AllProductsPage/index';
@@ -21,6 +21,11 @@ const App = () => {
     dispatch(getAllCategories)
     dispatch(getAllProducts)
   })
+
+  const cartState = useSelector(store => store.cart)
+  const favoriteState = useSelector(store => store.favorite)
+  useEffect(() => localStorage.setItem('shoppingCart', JSON.stringify(cartState)), [cartState])
+  useEffect(() => localStorage.setItem('favourite', JSON.stringify(favoriteState)), [favoriteState])
   return (
     <div className='wrapper'>
       <Routes>

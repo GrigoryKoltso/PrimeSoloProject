@@ -21,7 +21,9 @@ const checkProduct = (state, payload) => {
     }
 }
 
-export const cartReducer = (state=[], action) => {
+const currentCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+
+export const cartReducer = (state=currentCart, action) => {
     if(action.type === ADD_TO_CART){
         return checkProduct(state, action.payload)
     } else if(action.type === DELETE_FROM_CART){
