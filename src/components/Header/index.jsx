@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import s from './index.module.scss'
 import mainLogo from '../../assets/Logos/mainLogo.svg'
 import cartLogo from '../../assets/Logos/cart.svg'

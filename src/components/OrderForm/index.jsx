@@ -1,6 +1,7 @@
+import s from './index.module.scss';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
-import s from './index.module.scss';
+import { useEffect, useState } from 'react';
 
 const OrderForm = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -17,8 +18,6 @@ const OrderForm = () => {
             totalPrice: +totalPrice,
             cart: cartState
         };
-
-        console.log(newOrder);
         reset();
     };
 
