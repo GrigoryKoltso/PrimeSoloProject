@@ -11,7 +11,9 @@ const checkFavourite = (state, payload) => {
     }
 }
 
-export const favoriteReducer = (state=[], action) => {
+const currentFavorite = JSON.parse(localStorage.getItem('favourite')) || [];
+
+export const favoriteReducer = (state=currentFavorite, action) => {
     if(action.type === ADD_TO_FAVORITE){
         return checkFavourite(state, action.payload)
     }
