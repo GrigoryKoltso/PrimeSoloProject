@@ -1,0 +1,21 @@
+
+.cheap {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    span {
+        color: #424436;
+        font-style: Montserrat;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    input {
+        width: 36px;
+        height: 36px;
+        color: #8B8B8B;
+        border-radius: var(--radius-small, 6px);
+        border: 1px solid var(--white, #fffff1);
+        padding-left: 20px;
+    }
+}

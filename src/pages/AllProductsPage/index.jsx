@@ -1,16 +1,25 @@
-
-import React from 'react';
 import ProductsContainer from '../../components/ProductsContainer';
 import { useSelector } from 'react-redux';
-import s from './index.module.scss'
+import s from './index.module.scss';
+import SortForm from '../../components/SortForm';
+import FilterByPriceForm from '../../components/FilterByPriceForm';
+import { sortProductsByCategoryAction, filterByPriceAction, filterCheapAllProductsAction } from '../../store/actions/productsAction';
+import CheapProductsCheck from '../../components/CheapProductsCheck';
+
 const AllProductsPage = () => {
-    const allProductsState = useSelector(store => store.products)
+    const allProductsState = useSelector(store => store.products);
+
     console.log(allProductsState);
-    
+
     return (
         <div className={`${s.all_sales} app-container`}>
             <h2>All Products</h2>
-            <ProductsContainer products={allProductsState.data}/>
+            <div className='sortComponent'>
+                <FilterByPriceForm action={filterByPriceAction} />
+                <CheapProductsCheck action={filterCheapAllProductsAction}/>
+                <SortForm action={sortProductsByCategoryAction} />
+            </div>
+            <ProductsContainer products={allProductsState.data.filter(product => product.visible)} />
         </div>
     );
 };
