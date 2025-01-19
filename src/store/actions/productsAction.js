@@ -8,6 +8,15 @@ export const DECR_PRODUCT_COUNT = 'DECR_PRODUCT_COUNT';
 export const CHANGE_STATUS_SINGLE_PRODUCT = 'CHANGE_STATUS_SINGLE_PRODUCT';
 export const LOAD_PRODUCTS_BY_CATEGORY = 'LOAD_PRODUCTS_BY_CATEGORY';
 export const ADD_TO_FAVORITE = 'ADD_TO_FAVORITE';
+export const SORT_PRODUCTS_BY_CATEGORY = 'SORT_PRODUCTS_BY_CATEGORY';
+export const FILTER_BY_PRICE = 'FILTER_BY_PRICE';
+export const FILTER_CHEAP_ALL_PRODUCTS = 'FILTER_CHEAP_ALL_PRODUCTS';
+
+export const filterCheapAllProductsAction = value => ({ type: FILTER_CHEAP_ALL_PRODUCTS, payload: value });
+
+export const filterByPriceAction = values => ({ type: FILTER_BY_PRICE, payload: values });
+
+export const sortProductsByCategoryAction = value => ({ type: SORT_PRODUCTS_BY_CATEGORY, payload: value });
 
 export const changeStatusSingleProductAction = () => ({ type: CHANGE_STATUS_SINGLE_PRODUCT });
 
