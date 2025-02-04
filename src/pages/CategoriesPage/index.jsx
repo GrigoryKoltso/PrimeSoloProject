@@ -1,4 +1,4 @@
-import React from 'react';
+
 import CategoriesContainer from '../../components/CategoriesContainer';
 import { useSelector } from 'react-redux';
 const CategoriesPage = () => {

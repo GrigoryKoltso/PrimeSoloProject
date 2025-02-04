@@ -10,7 +10,13 @@ const FavoritesPage = () => {
     
     return (
         <div className={`${s.favoritePage} container`}>
-            <h2>Liked products</h2>
+            <div className={s.cart_title}>
+               <h2>Liked products</h2>
+               <div>
+                    <div className={s.border}></div>
+                    <Link to="/products">Back to the store</Link>
+               </div>
+            </div>
 
             {
                 favoriteState.length === 0 

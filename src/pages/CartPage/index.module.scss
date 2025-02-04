@@ -1,7 +1,38 @@
+.cart_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >div {
+        display: flex;
+        align-items: center;
+    }
+    .border {
+        width: 681px;
+        height: 1px;
+        background: #DDDDDD;
+    }
+    a {
+        display: inline-block;
+        width: 170px;
+        height: 36px;
+        color: #8B8B8B;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        background: transparent;
+        border: 1px solid #DDDDDD;
+        border-radius: 6px;
+        text-align: center;
+        line-height: 36px;
+        text-decoration: none; /* Убирает стандартное подчеркивание ссылок */
+    }
+    
+}
 .orderForm {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+
     >div {
         display: flex;
     }
@@ -23,7 +54,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 30px;
-    
+
     a {
         width: 484px;
         height: 58px;
@@ -39,6 +70,7 @@
         border-radius: var(--radius-small, 6px);
         background: var(--green, #92a134);
     }
+
     p {
         color: #424436;
         font-family: Montserrat;

@@ -1,0 +1,61 @@
+.container {
+  font-family: "Montserrat", sans-serif;
+  max-width: 1440px;
+  max-height: 1766px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  background: var(--white, #FFFFF1);
+  }
+  
+  .errorCode {
+    font-size: 144px;
+    font-weight: bold;
+    color: #6b8e23; /* Цвет текста */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 300px;
+    }
+  }
+  
+  .cactus {
+    width: 300px;
+    height: 270px;
+    margin: 20px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    h2 {
+      font-size: 64px;
+      margin-top: 20px;
+    }
+    
+  }
+  .description {
+    font-size: 20px;
+    color: #777;
+  }
+  
+  .button {
+    width: 209px;
+    height: 58px;
+    background-color: #6b8e23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #556b2f;
+  }

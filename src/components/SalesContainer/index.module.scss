@@ -1,4 +1,34 @@
-
+.cart_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 0 40px 0;
+    >div {
+        display: flex;
+        align-items: center;
+    }
+    .border {
+        width: 991px;
+        height: 1px;
+        background: #DDDDDD;
+    }
+    a {
+        display: inline-block;
+        width: 170px;
+        height: 36px;
+        color: #8B8B8B;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        background: transparent;
+        border: 1px solid #DDDDDD;
+        border-radius: 6px;
+        text-align: center;
+        line-height: 36px;
+        text-decoration: none; /* Убирает стандартное подчеркивание ссылок */
+    }
+    
+}
 .salesContainer {
     margin-top: 80px;
 
