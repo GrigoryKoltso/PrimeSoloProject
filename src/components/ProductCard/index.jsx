@@ -23,6 +23,11 @@ const ProductCard = ({ id, title, image, price, discont_price }) => {
         dispatch(isInCart ? deleteFromCartAction(id) : addToCartAction({ id, image, title, price }));
     };
 
+    const buttonToCartAction = (e) => {
+        e.preventDefault(); 
+        dispatch(addToCartAction({ id, image, title, price }));
+    };
+
     const favoriteAction = (e) => {
         e.preventDefault();
         dispatch(addToFavoriteAction({ id, image, title, price }));
@@ -48,7 +53,7 @@ const ProductCard = ({ id, title, image, price, discont_price }) => {
             <div className={s.card}>
                 <img src={`http://localhost:3333${image}`} alt={title} />
 
-                <div onClick={cartAction} className={s.add_to_cart}>Add to Cart</div>
+                <div onClick={buttonToCartAction} className={s.add_to_cart}>Add to Cart</div>
 
                 <div>
                     <h3>{trimText}</h3>

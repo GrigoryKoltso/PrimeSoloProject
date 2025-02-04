@@ -79,8 +79,9 @@ export const productsReducer = (state = initState, action) => {
             if (action.payload) {
                 const filteredData = state.data.map(product => ({
                     ...product,
-                    visible: product.price <= 50,
+                    visible: product.discont_price > 0,
                 }));
+
                 return {
                     ...state,
                     data: filteredData,

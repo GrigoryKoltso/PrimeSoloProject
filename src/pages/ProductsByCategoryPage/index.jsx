@@ -17,14 +17,10 @@ const ProductsByCategoryPage = () => {
   const productsByCategoryState = useSelector((state) => state.productsByCategory);
 
   const products = productsByCategoryState.data?.data || []; 
-  const isLoading = productsByCategoryState.loading;
-  const error = productsByCategoryState.error;
 
   return (
     <div className="container">
-      {isLoading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-      {!isLoading && !error && <ProductsContainer products={products} />}
+      {<ProductsContainer products={products} />}
     </div>
   );
 };

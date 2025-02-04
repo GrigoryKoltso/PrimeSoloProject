@@ -12,7 +12,13 @@ const CartPage = () => {
 
     return (
         <div className="container">
-            <h2>Shopping cart</h2>
+            <div className={s.cart_title}>
+               <h2>Shopping cart</h2>
+               <div>
+                    <div className={s.border}></div>
+                    <Link to="/products">Back to the store</Link>
+               </div>
+            </div>
             <div className={s.orderForm}>
                 <CartContainer />
                 {!isCartEmpty && <OrderForm />}
