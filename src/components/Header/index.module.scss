@@ -2,8 +2,8 @@
     background: var(--white, #FFFFF1);
     height: 128px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-
     &__leftIcons {
         display: flex;
         justify-content: center;
@@ -69,3 +69,11 @@
 
 
 }
+
+@media (max-width: 750px) {
+    .header {
+        display: none;
+    }
+}
+
+  

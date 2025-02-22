@@ -12,9 +12,9 @@ const AllProductsPage = () => {
     console.log(allProductsState);
 
     return (
-        <div className={`${s.all_sales} app-container`}>
+        <div className={`${s.all_products} app-container`}>
             <h2>All Products</h2>
-            <div className='sortComponent'>
+            <div className={`${s.sortComponent} sortComponent`}>
                 <FilterByPriceForm action={filterByPriceAction} />
                 <CheapProductsCheck action={filterCheapAllProductsAction}/>
                 <SortForm action={sortProductsByCategoryAction} />
