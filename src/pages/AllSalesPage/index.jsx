@@ -17,7 +17,7 @@ const AllSalesPage = () => {
     return (
         <section className={`${s.sales} container`}>
             <h2>Discounted items</h2>
-            <div className='sortComponent'>
+            <div className={s.sortComponent}>
                 <FilterByPriceForm action={filterByPriceAction} />
                 <SortForm action={sortProductsByCategoryAction} />
             </div>

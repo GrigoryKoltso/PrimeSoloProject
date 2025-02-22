@@ -27,7 +27,7 @@ const App = () => {
   useEffect(() => localStorage.setItem('shoppingCart', JSON.stringify(cartState)), [cartState])
   useEffect(() => localStorage.setItem('favourite', JSON.stringify(favoriteState)), [favoriteState])
   return (
-    <div className='wrapper'>
+    <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
