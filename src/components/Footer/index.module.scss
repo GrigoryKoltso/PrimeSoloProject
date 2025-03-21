@@ -1,10 +1,10 @@
-
 .footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: #fffff1;
     margin-top: 80px;
+    padding: 20px;
 
     &__container {
         margin-top: 40px;
@@ -22,25 +22,21 @@
         gap: 16px;
         flex: 1 0 0;
         align-self: stretch;
-        border-radius: var(--radius-big, 12px);
-        background: var(--light-grey, #F2F6D3);
+        border-radius: 12px;
+        background: #F2F6D3;
 
         h3 {
-            color: var(--txt-grey, #8B8B8B);
-            font-family: Montserrat;
+            color: #8B8B8B;
             font-size: 20px;
-            font-style: normal;
             font-weight: 500;
-            line-height: 130%; 
+            line-height: 130%;
         }
     }
 
     .contact_item p,
     .contact_item a {
-        color: var(--txt-black, #424436);
-        font-family: Montserrat;
+        color: #424436;
         font-size: 40px;
-        font-style: normal;
         font-weight: 600;
         line-height: 110%;
     }
@@ -51,10 +47,10 @@
 
         a {
             font-size: 24px;
-            transition: color 0.3s; 
+            transition: color 0.3s;
 
             &:hover {
-                color: #555; 
+                color: #555;
             }
         }
     }
@@ -62,8 +58,25 @@
     .phone {
         margin-right: auto;
     }
-}
 
-@media (max-width: 1024px) {
+    .map {
+        margin-top: 40px;
+    }
 
+    // АДАПТАЦИЯ
+    @media (max-width: 768px) {
+        &__container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        .map {
+            margin-top: 20px;
+        }
+    }
 }
