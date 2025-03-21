@@ -1,4 +1,4 @@
-import React from 'react';
+
 import s from './index.module.scss'
 import background from '../../assets/Banners/discount_form.svg'
 import { Link } from "react-router-dom";
@@ -28,11 +28,12 @@ const DiscountForm = () => {
             />
           </label>
 
-          <button type="submit">
-            <Link to="/sales" type="submit">
-              Get a discount
-            </Link>
-          </button>
+
+          <Link to="/sales" className={s.button}>
+            Get a discount
+          </Link>
+
+
         </form>
       </div>
     </section>

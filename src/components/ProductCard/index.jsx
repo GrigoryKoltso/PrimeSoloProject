@@ -19,12 +19,12 @@ const ProductCard = ({ id, title, image, price, discont_price }) => {
     const isInFavorite = favoriteState.find((el) => el.id === id);
 
     const cartAction = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         dispatch(isInCart ? deleteFromCartAction(id) : addToCartAction({ id, image, title, price }));
     };
 
     const buttonToCartAction = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         dispatch(addToCartAction({ id, image, title, price }));
     };
 

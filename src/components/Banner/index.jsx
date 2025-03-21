@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <section className={`${s.banner} app-container`}>
-          <h1>Amazing Discounts <br/> on Garden Products!</h1>
+          <h1 className={s.title}>Amazing Discounts <br/> on Garden Products!</h1>
             <Link to="/sales" className={s.btn}>
               Check out
             </Link>

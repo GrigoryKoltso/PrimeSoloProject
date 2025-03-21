@@ -1,7 +1,11 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
+
 
 .card {
     overflow: hidden;
@@ -173,11 +177,15 @@
             text-decoration: line-through;
         }
     }
+    
 }
 
+
+
 @media (max-width: 1024px) {
+
     .card {
-        width: 280px;
+        max-width: 260px;
         height: auto;
         gap: 15px;
     }
@@ -240,8 +248,8 @@
 @media (max-width: 480px) {
     .card {
         width: 100%;
-        min-width: 240px;
-        min-height: 350px; /* Add a minimum height */
+        max-width: 210px;
+        min-height: 320px; 
         padding: 10px;
         gap: 10px;
     }
@@ -276,3 +284,8 @@
     }
 }
 
+@media (max-width: 320px) {
+    .card {
+        max-width: 320px;
+    }
+}

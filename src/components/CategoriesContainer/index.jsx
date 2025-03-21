@@ -1,5 +1,4 @@
-import React from 'react';
-import { useSelector } from "react-redux";
+
 import CategoryCard from '../CategoryCard';
 import s from './index.module.scss'
 import { Link } from 'react-router-dom';
@@ -14,7 +13,7 @@ const CategoriesContainer = ( {categories} ) => {
                     <Link to="/categories">All categories</Link>
                </div>
             </div>
-            <div>
+            <div className={s.categoriesCont}>
                 {
                     categories.map(el => <CategoryCard key={el.id} {...el}/>)
                 }
