@@ -5,8 +5,9 @@
     gap: 30px;
 }
 
-@media (min-width: 768px) and (max-width: 1000px) {
+@media (max-width: 1024px) {
     .productsContainer {
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
 }
@@ -14,10 +15,15 @@
 @media (max-width: 768px) {
     .productsContainer {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
     }
 }
 
+@media (max-width: 480px) {
+    .productsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
 @media (max-width: 360px) {
     .productsContainer {
         grid-template-columns: repeat(2, 1fr);
@@ -29,5 +35,12 @@
     .productsContainer {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .productsContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
